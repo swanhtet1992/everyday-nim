@@ -5,7 +5,8 @@
 import sequtils
 
 proc applyToAll(numbers: seq[int], fun: proc): seq[int] =
-    numbers.map do (x: int) -> int: fun(x)
+    #numbers.map do (x: int) -> int: fun(x)
+    map numbers, fun
 
 proc multiplyByTwo(x: int): int =
     result = x * 2
